@@ -43,6 +43,8 @@ def line_cnn_sliding_window(
 
     convnet_outputs = TimeDistributed(convnet)(image_patches)
     # (num_windows, 128)
+    # (num_windows, 1000)
+    convnet
 
     # Now we have to get to (output_length, num_classes) shape. One way to do it is to do another sliding window with
     # width = floor(num_windows / output_length)

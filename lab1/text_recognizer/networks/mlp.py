@@ -6,8 +6,8 @@ from tensorflow.keras.layers import Dense, Dropout, Flatten
 
 def mlp(input_shape: Tuple[int, ...],
         output_shape: Tuple[int, ...],
-        layer_size: int=128,
-        dropout_amount: float=0.2,
+        layer_size: int=1000,
+        dropout_amount: float=0.3,
         num_layers: int=3) -> Model:
     """
     Simple multi-layer perceptron: just fully-connected layers with dropout between them, with softmax predictions.
@@ -29,6 +29,10 @@ def mlp(input_shape: Tuple[int, ...],
     model.add(Dropout(dropout_amount))
 
     #Third layer
+    model.add(Dense(layer_size, activation='relu'))
+    model.add(Dropout(dropout_amount))
+    
+    #Fourth layer
     model.add(Dense(layer_size, activation='relu'))
     model.add(Dropout(dropout_amount))
 
