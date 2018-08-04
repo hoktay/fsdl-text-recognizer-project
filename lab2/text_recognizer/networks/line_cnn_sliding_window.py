@@ -42,9 +42,16 @@ def line_cnn_sliding_window(
     convnet = KerasModel(inputs=convnet.inputs, outputs=convnet.layers[-2].output)
 
     convnet_outputs = TimeDistributed(convnet)(image_patches)
-    # (num_windows, 128)
     # (num_windows, 1000)
-    convnet
+    convnet_outputs_extra_dim = Lambda(lambda x: tf.expand_dims(x, -1))(convnet_outputs)
+      # (num_windows, 1000, 1)
+    num_windows = int((image_width - window_width) / window_stride) + 1
+    width = int(num_windows / output_length)
+    
+    conved_convnet_outputs = Conv2D(num_classes, (width, 1000), (width, 1), activation='softmax')(convnet_outputs_extra_dim)
+
+    squeezed_conved_convnet_outputs = Lambda(lambda x: tf.squeeze(x, 2))(conved_convnet_outputs)
+    softmax_output = Lambda(lambda x: x[:, :output_length, :])(squeezed_conved_convnet_outputs)
 
     # Now we have to get to (output_length, num_classes) shape. One way to do it is to do another sliding window with
     # width = floor(num_windows / output_length)
