@@ -52,8 +52,8 @@ def line_lstm_ctc(input_shape,
     convnet = KerasModel(inputs=convnet.inputs, outputs=convnet.layers[-2].output)
 
     convnet_outputs = TimeDistributed(convnet)(image_patches)
-    # (num_windows, 128)
-    lstm_output = lstm_fn(1000, return_sequences=True)(convnet_outputs)
+    # (num_windows, 400)
+    lstm_output = lstm_fn(400, return_sequences=True)(convnet_outputs)
     
     softmax_output = Dense(num_classes, activation='softmax', name='softmax_output')(lstm_output)    
 

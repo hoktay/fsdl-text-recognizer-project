@@ -15,7 +15,6 @@ def lenet(input_shape: Tuple[int, ...], output_shape: Tuple[int, ...]) -> Model:
         input_shape = (input_shape[0], input_shape[1], 1)
     model.add(Conv2D(32, 
                      kernel_size=(3, 3), 
-                     strides = (1,1),
                      activation='relu', 
                      input_shape=input_shape))
 
@@ -23,17 +22,16 @@ def lenet(input_shape: Tuple[int, ...], output_shape: Tuple[int, ...]) -> Model:
                       strides = (2,2)))
     
     model.add(Conv2D(64, 
-                     (5, 5), 
+                     (3, 3), 
                      activation='relu'))
-    
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Flatten())
-    model.add(Dense(1000, activation='relu'))
-    model.add(Dropout(0.4))
-    model.add(Dense(1000, activation='relu'))
-    model.add(Dropout(0.4))
-    model.add(Dense(1000, activation='relu'))
-    model.add(Dropout(0.4))
+    model.add(Dense(400, activation='relu'))
+    model.add(Dropout(0.35))
+    model.add(Dense(400, activation='relu'))
+    model.add(Dropout(0.35))
+    model.add(Dense(400, activation='relu'))
+    model.add(Dropout(0.35))
     model.add(Dense(num_classes, activation='softmax'))
     ##### Your code above (Lab 2)
 
