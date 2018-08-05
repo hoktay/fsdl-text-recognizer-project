@@ -24,4 +24,3 @@ def lenet(input_shape: Tuple[int, ...], output_shape: Tuple[int, ...]) -> Model:
     ##### Your code above (Lab 2)
 
     return model
-

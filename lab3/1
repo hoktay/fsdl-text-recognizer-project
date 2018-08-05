@@ -1,0 +1,109 @@
+2018-08-04 18:30:21.345726: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-08-04 18:30:21.501564: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-08-04 18:30:21.502876: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:07.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2018-08-04 18:30:21.502902: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2018-08-04 18:30:21.822775: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-08-04 18:30:21.822829: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2018-08-04 18:30:21.822839: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2018-08-04 18:30:21.823188: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/device:GPU:0 with 10761 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:07.0, compute capability: 3.7)
+WARNING:tensorflow:Output "ctc_decoded" missing from loss dictionary. We assume this was done on purpose, and we will not be expecting any data to be passed to "ctc_decoded" during training.
+2018-08-04 18:30:23.783358: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2018-08-04 18:30:23.783470: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-08-04 18:30:23.784798: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2018-08-04 18:30:23.784817: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2018-08-04 18:30:23.785088: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10761 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:07.0, compute capability: 3.7)
+2018-08-04 18:30:24.083551: I tensorflow/core/kernels/cuda_solvers.cc:159] Creating CudaSolver handles for stream 0x3aec2d0
+2018-08-04 18:46:31.595944: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-08-04 18:46:31.747536: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-08-04 18:46:31.748875: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:07.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2018-08-04 18:46:31.748899: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2018-08-04 18:46:32.056771: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-08-04 18:46:32.056817: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2018-08-04 18:46:32.056826: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2018-08-04 18:46:32.057125: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/device:GPU:0 with 10760 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:07.0, compute capability: 3.7)
+WARNING:tensorflow:Output "ctc_decoded" missing from loss dictionary. We assume this was done on purpose, and we will not be expecting any data to be passed to "ctc_decoded" during training.
+2018-08-04 18:46:34.078637: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2018-08-04 18:46:34.078763: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-08-04 18:46:34.078801: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2018-08-04 18:46:34.078810: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2018-08-04 18:46:34.079154: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10760 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:07.0, compute capability: 3.7)
+2018-08-04 18:46:34.383512: I tensorflow/core/kernels/cuda_solvers.cc:159] Creating CudaSolver handles for stream 0xfc4da80
+2018-08-04 19:03:42.569501: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-08-04 19:03:42.720681: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-08-04 19:03:42.722162: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:07.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2018-08-04 19:03:42.722201: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2018-08-04 19:03:43.034635: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-08-04 19:03:43.034706: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2018-08-04 19:03:43.034731: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2018-08-04 19:03:43.035134: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/device:GPU:0 with 10761 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:07.0, compute capability: 3.7)
+WARNING:tensorflow:Output "ctc_decoded" missing from loss dictionary. We assume this was done on purpose, and we will not be expecting any data to be passed to "ctc_decoded" during training.
+2018-08-04 19:03:45.093857: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2018-08-04 19:03:45.093981: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-08-04 19:03:45.093995: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2018-08-04 19:03:45.094019: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2018-08-04 19:03:45.094303: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10761 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:07.0, compute capability: 3.7)
+2018-08-04 19:03:45.402786: I tensorflow/core/kernels/cuda_solvers.cc:159] Creating CudaSolver handles for stream 0xf27eb10
+2018-08-04 19:24:24.030850: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-08-04 19:24:24.194193: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-08-04 19:24:24.195506: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:07.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2018-08-04 19:24:24.195544: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2018-08-04 19:24:24.638792: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-08-04 19:24:24.638850: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2018-08-04 19:24:24.638862: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2018-08-04 19:24:24.639216: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/device:GPU:0 with 10760 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:07.0, compute capability: 3.7)
+WARNING:tensorflow:Output "ctc_decoded" missing from loss dictionary. We assume this was done on purpose, and we will not be expecting any data to be passed to "ctc_decoded" during training.
+2018-08-04 19:24:28.400698: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2018-08-04 19:24:28.400773: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-08-04 19:24:28.400785: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2018-08-04 19:24:28.400792: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2018-08-04 19:24:28.401054: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10760 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:07.0, compute capability: 3.7)
+2018-08-04 19:24:28.957987: I tensorflow/core/kernels/cuda_solvers.cc:159] Creating CudaSolver handles for stream 0x1c83cd0
+2018-08-04 20:45:56.521803: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-08-04 20:45:57.126486: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-08-04 20:45:57.131909: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:07.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2018-08-04 20:45:57.131989: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2018-08-04 20:45:58.099608: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-08-04 20:45:58.099668: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2018-08-04 20:45:58.099679: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2018-08-04 20:45:58.100107: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/device:GPU:0 with 10761 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:07.0, compute capability: 3.7)
+WARNING:tensorflow:Output "ctc_decoded" missing from loss dictionary. We assume this was done on purpose, and we will not be expecting any data to be passed to "ctc_decoded" during training.
+2018-08-04 20:46:06.508687: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2018-08-04 20:46:06.508793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-08-04 20:46:06.508807: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2018-08-04 20:46:06.508816: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2018-08-04 20:46:06.509055: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10761 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:07.0, compute capability: 3.7)
+2018-08-04 20:46:07.821602: I tensorflow/core/kernels/cuda_solvers.cc:159] Creating CudaSolver handles for stream 0x4ade6f0
+2018-08-04 21:27:13.920893: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-08-04 21:27:14.718902: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-08-04 21:27:14.720332: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:07.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2018-08-04 21:27:14.720374: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2018-08-04 21:27:16.223634: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-08-04 21:27:16.223745: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2018-08-04 21:27:16.223756: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2018-08-04 21:27:16.224227: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/device:GPU:0 with 10761 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:07.0, compute capability: 3.7)
+WARNING:tensorflow:Output "ctc_decoded" missing from loss dictionary. We assume this was done on purpose, and we will not be expecting any data to be passed to "ctc_decoded" during training.
+2018-08-04 21:27:24.315607: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2018-08-04 21:27:24.315699: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-08-04 21:27:24.315711: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2018-08-04 21:27:24.315718: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2018-08-04 21:27:24.315956: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10761 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:07.0, compute capability: 3.7)
+2018-08-04 21:27:26.004352: I tensorflow/core/kernels/cuda_solvers.cc:159] Creating CudaSolver handles for stream 0x3aabab0
+Killed

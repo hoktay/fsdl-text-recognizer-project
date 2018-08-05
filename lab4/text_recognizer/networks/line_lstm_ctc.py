@@ -12,11 +12,16 @@ from text_recognizer.networks.misc import slide_window
 from text_recognizer.networks.ctc import ctc_decode
 
 
-def line_lstm_ctc(input_shape, output_shape, window_width=28, window_stride=14):
+def line_lstm_ctc(input_shape, 
+                  output_shape, 
+                  window_width=28, 
+                  window_stride=14):
+    
     image_height, image_width = input_shape
     output_length, num_classes = output_shape
 
     num_windows = int((image_width - window_width) / window_stride) + 1
+    
     if num_windows < output_length:
         raise ValueError(f'Window width/stride need to generate at least {output_length} windows (currently {num_windows})')
 
@@ -37,24 +42,21 @@ def line_lstm_ctc(input_shape, output_shape, window_width=28, window_stride=14):
     ##### Your code below (Lab 3)
     image_reshaped = Reshape((image_height, image_width, 1))(image_input)
     # (image_height, image_width, 1)
-
+    
     image_patches = Lambda(
         slide_window,
         arguments={'window_width': window_width, 'window_stride': window_stride}
     )(image_reshaped)
-    # (num_windows, image_height, window_width, 1)
-
-    # Make a LeNet and get rid of the last two layers (softmax and dropout)
+    
     convnet = lenet((image_height, window_width, 1), (num_classes,))
     convnet = KerasModel(inputs=convnet.inputs, outputs=convnet.layers[-2].output)
+
     convnet_outputs = TimeDistributed(convnet)(image_patches)
-    # (num_windows, 128)
+    # (num_windows, 200)
+    lstm_output = lstm_fn(200, return_sequences=True)(convnet_outputs)
+    
+    softmax_output = Dense(num_classes, activation='softmax', name='softmax_output')(lstm_output)    
 
-    lstm_output = lstm_fn(128, return_sequences=True)(convnet_outputs)
-    # (num_windows, 128)
-
-    softmax_output = Dense(num_classes, activation='softmax', name='softmax_output')(lstm_output)
-    # (num_windows, num_classes)
     ##### Your code above (Lab 3)
 
     input_length_processed = Lambda(
@@ -77,4 +79,5 @@ def line_lstm_ctc(input_shape, output_shape, window_width=28, window_stride=14):
         outputs=[ctc_loss_output, ctc_decoded_output]
     )
     return model
+
 

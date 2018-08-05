@@ -1,0 +1,4 @@
+[default]
+entity: hoktay
+project: ho_text_recognizer
+base_url: https://api.wandb.ai

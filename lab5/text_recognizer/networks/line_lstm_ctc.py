@@ -12,7 +12,7 @@ from text_recognizer.networks.misc import slide_window
 from text_recognizer.networks.ctc import ctc_decode
 
 
-def line_lstm_ctc(input_shape, output_shape, window_width=28, window_stride=14):
+def line_lstm_ctc(input_shape, output_shape, window_width=6, window_stride=2):
     image_height, image_width = input_shape
     output_length, num_classes = output_shape
 
@@ -50,10 +50,16 @@ def line_lstm_ctc(input_shape, output_shape, window_width=28, window_stride=14):
     convnet_outputs = TimeDistributed(convnet)(image_patches)
     # (num_windows, 128)
 
-    lstm_output = lstm_fn(128, return_sequences=True)(convnet_outputs)
+    lstm_output = Bidirectional(lstm_fn(128, return_sequences=True))(convnet_outputs)
     # (num_windows, 128)
 
-    softmax_output = Dense(num_classes, activation='softmax', name='softmax_output')(lstm_output)
+    lstm_output_1_drop_out = Dropout(0.2)(lstm_output)
+    
+    lstm_output2 = Bidirectional(lstm_fn(128, return_sequences=True))(lstm_output_1_drop_out)
+
+    lstm_output_2_drop_out = Dropout(0.2)(lstm_output2)
+
+    softmax_output = Dense(num_classes, activation='softmax', name='softmax_output')(lstm_output_2_drop_out)
     # (num_windows, num_classes)
     ##### Your code above (Lab 3)
 
@@ -77,4 +83,3 @@ def line_lstm_ctc(input_shape, output_shape, window_width=28, window_stride=14):
         outputs=[ctc_loss_output, ctc_decoded_output]
     )
     return model
-
